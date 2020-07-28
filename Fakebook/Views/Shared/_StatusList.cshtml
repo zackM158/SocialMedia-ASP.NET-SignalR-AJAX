@@ -1,0 +1,49 @@
+﻿@model Entities.StatusInfo
+
+@{ 
+    string likeButtonId = "likeButton" + Model.Status.StatusId;
+    string amountOfLikesButtonId = "amountOfLikes" + Model.Status.StatusId;
+    string likeButtonText = "Like";
+    string statusClass = ViewBag.StatusClass;
+    string likedClass = "DefaultButton";
+
+}
+    <div class="container partialContainer centerOnMobile @statusClass" style="background-color: #3b5997;">
+            <section class="row">
+
+                <div class="col-lg-2" style="text-align: center;">
+                <a href="@Url.Action("Index", "Account", new { id = Model.Status.UserId })">
+                    <img alt="Avatar For @Model.SenderName" src="~/Images/@Model.ImageURL" class="Avatar" style=" margin-top: 15px"/>
+                </a> 
+                </div>
+
+                <div class="col-lg-8 ">
+                    <h2 class="UserListName">@Html.ActionLink(Model.SenderName, "Index", "Account", new { id = Model.UserId }, null)</h2>
+
+                    <p class="sentAt">@Model.Status.SentAt.ToLongDateString() At @Model.Status.SentAt.ToShortTimeString()</p>
+
+                    <p class="partialText">@Model.Status.Text</p>
+
+                </div>
+
+                <div class="col-lg-2 " style="padding: 10px 10px 10px 0">
+                    @if (Model.Liked)
+                    {
+                        likeButtonText = "Liked";
+                        likedClass = "LikedButton";
+
+                    }
+
+                    @if (Model.UserId == Model.Status.UserId)
+                    {
+                        @Html.ActionLink("Delete", "DeleteStatus", "Social", new { statusId = Model.Status.StatusId }, new { @class = "DefaultButton", id = "DeleteStatus" })
+                    }
+                    else
+                    {
+                        <input type="button" onclick="toggleLike(_statusId = @Model.Status.StatusId)" value=@likeButtonText class=@likedClass id=@likeButtonId />
+                    }
+
+                    @Html.ActionLink(Model.Status.Likes.ToString() + " Likes", "LikedUsers", "Social", new { statusId = Model.Status.StatusId }, new { @class = "DefaultButton", id = amountOfLikesButtonId })
+                </div>
+            </section>
+    </div>

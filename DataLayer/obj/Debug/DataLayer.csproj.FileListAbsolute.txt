@@ -1,0 +1,34 @@
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\DataLayer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\DataLayer.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\EntityFramework.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\EntityFramework.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\obj\Debug\DataLayer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\obj\Debug\DataLayer.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\Entities.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\Entities.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\bin\Debug\Entities.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\obj\Debug\DataLayer.Migrations.InitialModel.resources
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\DataLayer.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\DataLayer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\DataLayer.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\Entities.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\EntityFramework.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\Entities.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\Entities.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\EntityFramework.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\obj\Debug\DataLayer.csprojAssemblyReference.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\obj\Debug\DataLayer.Migrations.InitialModel.resources
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\obj\Debug\DataLayer.csproj.GenerateResource.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\obj\Debug\DataLayer.csproj.CoreCompileInputs.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\obj\Debug\DataLayer.csproj.CopyComplete
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\obj\Debug\DataLayer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\DataLayer\obj\Debug\DataLayer.pdb

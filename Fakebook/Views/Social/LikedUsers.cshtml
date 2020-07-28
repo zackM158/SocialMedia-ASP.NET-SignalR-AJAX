@@ -1,0 +1,54 @@
+﻿@model Fakebook.Models.LikedUsersModel
+
+@Html.Partial("_StatusList", Model.StatusInfo)
+
+@if (Model.StatusInfo.LikedUsers == null || Model.StatusInfo.LikedUsers.Count <= 0)
+{
+    <h3>This status has no likes yet</h3>
+}
+else
+{
+<div style="text-align:center">
+    <h1>Likes</h1>
+</div>
+    <hr />
+    <div class="row">
+        @foreach (Entities.User user in Model.StatusInfo.LikedUsers)
+        {
+            string friendButtonText;
+            string friendButtonClass = "UserButton";
+            bool requested = false;
+            if (Model.FriendIds != null && Model.FriendIds.Contains(user.UserId.ToString()))
+            {
+                friendButtonText = "Remove Friend";
+            }
+            else if (Model.SentFriendRequestIds != null && Model.SentFriendRequestIds.Contains(user.UserId))
+            {
+                friendButtonText = "Cancel Request";
+                friendButtonClass = "RemoveButton";
+
+            }
+            else if (Model.FriendRequestIds != null && Model.FriendRequestIds.Contains(user.UserId))
+            {
+                friendButtonText = "Accept";
+                requested = true;
+            }
+            else
+            {
+                friendButtonText = "Add Friend";
+                friendButtonClass = "AcceptButton";
+            }
+
+            Fakebook.Models.UserFriendModel userFriendModel = new Fakebook.Models.UserFriendModel()
+            {
+                User = user,
+                FriendButtonText = friendButtonText,
+                Requested = requested,
+                FriendButtonClass = friendButtonClass,
+                CurrentUserId = Model.User.UserId
+            };
+
+            @Html.Partial("_UserList", userFriendModel)
+        }
+    </div>
+}

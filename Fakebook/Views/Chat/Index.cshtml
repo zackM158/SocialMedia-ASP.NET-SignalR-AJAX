@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Entities.Message>
+
+@{
+    ViewBag.Title = "ViewBag.FriendName Chat";
+    var currentUserId = ViewBag.CurrentUserID;
+    var friendId = ViewBag.FriendId;
+}
+
+    <div style="text-align: center; margin-top: 5px">
+        <a href="@Url.Action("Index", "Account", new { id = friendId })">
+            <img alt="Avatar For @ViewBag.FriendName" src="~/Images/@ViewBag.FriendImage" class="ChatAvatar" />
+            <h3 style=" display: inline;">@ViewBag.FriendName</h3>
+            </a>
+    </div>
+
+    <div class="container" style="padding:0;">
+        <div style="margin-top: 20px;">
+            <input type="hidden" id="senderId" value="@currentUserId" />
+            <input type="hidden" id="recieverId" value="@friendId" />
+            <ul id="discussion">
+                @if (Model != null)
+                {
+                    foreach (var message in Model)
+                    {
+
+                        string containerClass, timePosition, textAlign, contcolor, floatPos;
+                        if (currentUserId == message.SenderId)
+                        {
+                            containerClass = "container";
+                            timePosition = "time-right text-light";
+                            textAlign = "text-right text-white messageText";
+                            contcolor = "bg-primary yourMessage";
+                            floatPos = "right";
+                        }
+                        else
+                        {
+                            containerClass = "container";
+                            timePosition = "time-left";
+                            textAlign = "text-left messageText";
+                            contcolor = "bg-light otherMessage";
+                            floatPos = "left";
+                        }
+
+                        <div class="row">
+                            <div class="@containerClass @contcolor messageHolder" style="float:@floatPos; width:auto;">
+                                <p style="font-size: 1.5em" class="@textAlign">@message.Text</p>
+
+                                @if (message.SentAt > DateTime.Now.AddDays(-1))
+                                {
+                                    <span class="@timePosition">@message.SentAt.ToShortTimeString()</span>
+                                }
+                                else
+                                {
+                                    <span class="@timePosition">@message.SentAt.ToLongDateString()</span>
+                                }
+                            </div>
+                        </div>
+                    }
+                }
+
+            </ul>
+            <div class="messageInput col-md-10 centerOnMobile">
+                <input type="text" class="form-control" id="message" />
+
+                <input type="button" value="Send" class="btn btn-default" id="sendmessage" />
+            </div>
+        </div>
+
+        </div>
+
+        @section scripts {
+            <script src="~/Scripts/jquery.signalR-2.2.2.min.js"></script>
+            <script src="~/signalr/hubs"></script>
+            <script src="~/Scripts/ChatScript.js"></script>
+
+        }

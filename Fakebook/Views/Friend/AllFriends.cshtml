@@ -1,0 +1,160 @@
+﻿@model Fakebook.Models.UserInfoModel
+
+@{
+    ViewBag.Title = Model.User.FirstName + "'s Friends";
+
+    int totalMutual = 0;
+    if (Model.MutualFriends != null)
+    {
+        totalMutual = Model.MutualFriends.Count();
+    }
+}
+<div class="container" style="padding-top: 20px">
+    <h2 style="display:inline">@Model.User.FirstName @Model.User.LastName's Friends</h2>
+
+    @if (totalMutual > 0)
+    {
+        <div id="totalMutual" style="display:none">@totalMutual</div>
+        <div style="display:inline; margin-left: 40px;">
+            <input type="button" id="mutualButton" value="Mutual Friends: @totalMutual" class="SecondaryButton" />
+        </div>
+    }
+    </div>
+
+
+    @if (Model.FriendRequests != null && Model.FriendRequests.Count > 0)
+    {
+        <h2>Friend Requests</h2>
+        <div class="row">
+            @foreach (var user in Model.FriendRequests)
+            {
+
+                string friendButtonText = "Accept";
+                string friendButtonClass = "UserButton";
+                bool requested = true;
+
+
+                Fakebook.Models.UserFriendModel userFriendModel = new Fakebook.Models.UserFriendModel()
+                {
+                    User = user,
+                    FriendButtonText = friendButtonText,
+                    Requested = requested,
+                    FriendButtonClass = friendButtonClass,
+                    CurrentUserId = Model.CurrentUserId
+                };
+
+                @Html.Partial("_UserList", userFriendModel)
+
+            }
+
+        </div>
+        <hr style=" background-color: black; border: 0 none; height: 2px;" />
+    }
+
+    @if (Model.OtherUsers == null || Model.OtherUsers.Count() == 0)
+    {
+        <div style="padding:20px; text-align:center">
+            <h2>@Html.ActionLink("Find Friends!", "AllUsers", "Social", null, new { @class = "SecondaryButton" })</h2>
+        </div>
+    }
+    else
+    {
+        <div id="allFriends">
+            <div class="row">
+                @foreach (var user in Model.OtherUsers)
+                {
+
+                    string friendButtonText;
+                    string friendButtonClass = "UserButton";
+                    bool requested = false;
+                    if (Model.FriendIds != null && Model.FriendIds.Contains(user.UserId.ToString()))
+                    {
+                        friendButtonText = "Remove Friend";
+                    }
+                    else if (Model.SentFriendRequestIds != null && Model.SentFriendRequestIds.Contains(user.UserId))
+                    {
+                        friendButtonText = "Cancel Request";
+                        friendButtonClass = "RemoveButton";
+                    }
+                    else if (Model.FriendRequestIds != null && Model.FriendRequestIds.Contains(user.UserId))
+                    {
+                        friendButtonText = "Accept";
+                        requested = true;
+                    }
+                    else
+                    {
+                        friendButtonText = "Add Friend";
+                        friendButtonClass = "AcceptButton";
+                    }
+
+                    Fakebook.Models.UserFriendModel userFriendModel = new Fakebook.Models.UserFriendModel()
+                    {
+                        User = user,
+                        FriendButtonText = friendButtonText,
+                        Requested = requested,
+                        FriendButtonClass = friendButtonClass,
+                        CurrentUserId = Model.CurrentUserId
+                    };
+
+                    @Html.Partial("_UserList", userFriendModel)
+
+                }
+            </div>
+        </div>
+
+        <div id="mutualFriends" style="display:none">
+            <div class="row">
+                @if (Model.MutualFriends == null)
+                {
+                    <h2>No Mutual Friends</h2>
+                }
+                else
+                {
+                    foreach (var user in Model.MutualFriends)
+                    {
+
+                        string friendButtonText;
+                        string friendButtonClass = "UserButton";
+                        bool requested = false;
+                        if (Model.FriendIds != null && Model.FriendIds.Contains(user.UserId.ToString()))
+                        {
+                            friendButtonText = "Remove Friend";
+                        }
+                        else if (Model.SentFriendRequestIds != null && Model.SentFriendRequestIds.Contains(user.UserId))
+                        {
+                            friendButtonText = "Cancel Request";
+                            friendButtonClass = "RemoveButton";
+
+                        }
+                        else if (Model.FriendRequestIds != null && Model.FriendRequestIds.Contains(user.UserId))
+                        {
+                            friendButtonText = "Accept";
+                            requested = true;
+                        }
+                        else
+                        {
+                            friendButtonText = "Add Friend";
+                            friendButtonClass = "AcceptButton";
+                        }
+
+                        Fakebook.Models.UserFriendModel userFriendModel = new Fakebook.Models.UserFriendModel()
+                        {
+                            User = user,
+                            FriendButtonText = friendButtonText,
+                            Requested = requested,
+                            FriendButtonClass = friendButtonClass,
+                            CurrentUserId = Model.CurrentUserId
+                        };
+
+                        @Html.Partial("_UserList", userFriendModel)
+
+                    }
+                }
+            </div>
+        </div>
+    }
+
+    @section scripts {
+        <script src="~/Scripts/mutualFriends.js"></script>
+
+    }

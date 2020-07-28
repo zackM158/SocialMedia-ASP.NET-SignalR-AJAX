@@ -1,0 +1,74 @@
+﻿@model Fakebook.Models.UserInfoModel
+
+    <div class="container centerOnMobile" style="padding-top: 20px">
+        <h1  class="DisplayBlockOnMobile">@ViewBag.Title</h1>
+
+        <div  class="DisplayBlockOnMobile" style="float:right">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                <input name="searchTerm" class="form-control" type="text" placeholder="Search For People..." autocomplete="off" value="@ViewBag.SearchTerm" id="search">
+            }
+        </div>
+
+        <div class="TopButton">
+            @if (ViewBag.IsPeople != null && ViewBag.IsPeople == true)
+            {
+                @Html.ActionLink("All Users", "AllUsers", "Social", null, new { @class = "SecondaryButton" })
+            }
+            else
+            {
+                @Html.ActionLink("People You May Know", "AllUsers", "Social", new { searchTerm = "mutual" }, new { @class = "SecondaryButton" })
+            }
+        </div>
+
+
+    </div>
+
+@if (Model.OtherUsers == null || Model.OtherUsers.Count() == 0)
+{
+    <h2>No Other Users :(</h2>
+}
+else
+{
+
+    <div class="row">
+        @foreach (var user in Model.OtherUsers)
+        {
+            string friendButtonText;
+            string friendButtonClass = "UserButton";
+            bool requested = false;
+            if (Model.FriendIds != null && Model.FriendIds.Contains(user.UserId.ToString()))
+            {
+                friendButtonText = "Remove Friend";
+            }
+            else if (Model.SentFriendRequestIds != null && Model.SentFriendRequestIds.Contains(user.UserId))
+            {
+                friendButtonText = "Cancel Request";
+                friendButtonClass = "RemoveButton";
+            }
+            else if (Model.FriendRequestIds != null && Model.FriendRequestIds.Contains(user.UserId))
+            {
+                friendButtonText = "Accept";
+                requested = true;
+            }
+            else
+            {
+                friendButtonText = "Add Friend";
+                friendButtonClass = "AcceptButton";
+            }
+
+            Fakebook.Models.UserFriendModel userFriendModel = new Fakebook.Models.UserFriendModel()
+            {
+                User = user,
+                FriendButtonText = friendButtonText,
+                Requested = requested,
+                FriendButtonClass = friendButtonClass,
+                CurrentUserId = Model.CurrentUserId
+            };
+
+        @Html.Partial("_UserList", userFriendModel)
+        }
+
+    </div>
+}

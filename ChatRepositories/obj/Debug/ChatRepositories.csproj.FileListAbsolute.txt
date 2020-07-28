@@ -1,0 +1,60 @@
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\ChatRepositories.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\ChatRepositories.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\ChatRepositories.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\DataLayer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\Entities.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\EntityFramework.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\ZacksLibrary.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\DataLayer.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\DataLayer.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\Entities.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\Entities.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\ZacksLibrary.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\EntityFramework.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\obj\Debug\ChatRepositories.csprojAssemblyReference.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\obj\Debug\ChatRepositories.csproj.CoreCompileInputs.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\obj\Debug\ChatRepositories.csproj.CopyComplete
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\obj\Debug\ChatRepositories.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ChatRepositories\obj\Debug\ChatRepositories.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\ChatRepositories.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\ChatRepositories.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\ChatRepositories.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\DataLayer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\Entities.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\EntityFramework.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\ZacksLibrary.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\DataLayer.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\DataLayer.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\Entities.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\Entities.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\ZacksLibrary.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\EntityFramework.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\obj\Debug\ChatRepositories.csprojAssemblyReference.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\obj\Debug\ChatRepositories.csproj.CoreCompileInputs.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\obj\Debug\ChatRepositories.csproj.CopyComplete
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\obj\Debug\ChatRepositories.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp Backup\ChatRepositories\obj\Debug\ChatRepositories.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\obj\Debug\ChatRepositories.csprojAssemblyReference.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\obj\Debug\ChatRepositories.csproj.CoreCompileInputs.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\obj\Debug\ChatRepositories.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\obj\Debug\ChatRepositories.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\ChatRepositories.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\ChatRepositories.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\ChatRepositories.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\DataLayer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\Entities.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\EntityFramework.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\EntityFramework.SqlServer.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\ZacksLibrary.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\DataLayer.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\DataLayer.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\Entities.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\Entities.dll.config
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\ZacksLibrary.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\EntityFramework.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\bin\Debug\EntityFramework.SqlServer.xml
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ChatRepositories\obj\Debug\ChatRepositories.csproj.CopyComplete

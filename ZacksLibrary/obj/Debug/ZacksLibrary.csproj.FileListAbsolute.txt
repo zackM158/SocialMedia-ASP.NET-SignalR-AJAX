@@ -1,0 +1,12 @@
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ZacksLibrary\bin\Debug\ZacksLibrary.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ZacksLibrary\bin\Debug\ZacksLibrary.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ZacksLibrary\obj\Debug\ZacksLibrary.csprojAssemblyReference.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ZacksLibrary\obj\Debug\ZacksLibrary.csproj.CoreCompileInputs.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ZacksLibrary\obj\Debug\ZacksLibrary.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp\ZacksLibrary\obj\Debug\ZacksLibrary.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ZacksLibrary\bin\Debug\ZacksLibrary.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ZacksLibrary\bin\Debug\ZacksLibrary.pdb
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ZacksLibrary\obj\Debug\ZacksLibrary.csprojAssemblyReference.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ZacksLibrary\obj\Debug\ZacksLibrary.csproj.CoreCompileInputs.cache
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ZacksLibrary\obj\Debug\ZacksLibrary.dll
+D:\Users\Zack\Documents\FDM\OOD\Projects\CSharpWorkspace\ChatApp New\ZacksLibrary\obj\Debug\ZacksLibrary.pdb

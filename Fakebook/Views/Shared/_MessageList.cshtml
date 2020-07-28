@@ -1,0 +1,43 @@
+﻿@model Entities.MessageInfo
+
+@{
+    string messageColour = "#3b5997";
+    bool sentByMe = Model.Message.SenderId == ViewBag.CurrentUserId;
+    if (Model.Message.Seen || sentByMe)
+    {
+        messageColour = "#828282";
+    }
+
+    string sentByClass = "SentByThem";
+    if (sentByMe)
+    {
+        sentByClass = "SentByMe";
+    }
+
+}
+    <a href="@Url.Action("Index", "Chat", new { friendId = Model.User.UserId })">
+        <div class="container partialContainer" style="background-color: @messageColour; width:70vw;">
+            <section class="row">
+
+                <div class="col-lg-2" style="text-align: center;">
+                        <img alt="Avatar For @Model.User.FirstName @Model.User.LastName" src="~/Images/@Model.User.ImageUrl" class="Avatar" style=" margin-top: 5%;"/>
+                </div>
+
+                <div class="col-lg-10">
+                    <h2 class="UserListName" style="display: inline-block">@Model.User.FirstName @Model.User.LastName</h2>
+
+                    @if (Model.Message.SentAt > DateTime.Now.AddDays(-1))
+                    {
+                        <p class="sentAt">@Model.Message.SentAt.ToShortTimeString()</p>
+                    }
+                    else
+                    {
+                        <p class="sentAt">@Model.Message.SentAt.ToLongDateString()</p>
+                    }
+
+                <p class="partialText @sentByClass">@Model.Message.Text</p>
+
+                </div>
+            </section>
+        </div>
+    </a>

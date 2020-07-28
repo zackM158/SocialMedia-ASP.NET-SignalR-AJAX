@@ -1,0 +1,50 @@
+﻿@model Fakebook.Models.UserFriendModel
+
+@{
+    string friendButtonId = "friendButton" + Model.User.UserId;
+    string rejectButtonId = "rejectButton" + Model.User.UserId;
+    string friendActionId = "friendAction" + Model.User.UserId;
+}
+
+<div class="col-sm-3 " style="padding: 10px">
+    <div class="row partialContainer" style="background-color:#3b5997; margin:0; padding:10px 0 ">
+        <a href="@Url.Action("Index", "Account", new { id = Model.User.UserId })">
+            <h2 style="margin:0; color:white; text-align:center">@Model.User.FirstName @Model.User.LastName</h2>
+            <div class="col-lg-4" style="text-align:center">
+                <img alt="Avatar For @Model.User.FirstName @Model.User.LastName" src="~/Images/@Model.User.ImageUrl" class="Avatar" />
+            </div>
+        </a>
+
+
+        <div class="col-lg-8">
+
+            @if (Model.User.UserId == Model.CurrentUserId)
+            {
+                <h1>Me</h1>
+            }
+            else
+            {
+                <div class="row">
+                    @if (Model.Requested)
+                    {
+                        <div class="col-lg-6" style="padding: 0;" id="@rejectButtonId">
+                            <input type="button" onclick="rejectFriend(friendId = @Model.User.UserId)" value="Reject" class="RejectButton" />
+                        </div>
+                        <div class="col-lg-6" style="padding: 0" id="@friendActionId">
+                            <input type="button" onclick="toggleFriend(friendId = @Model.User.UserId)" value="@Model.FriendButtonText" class="AcceptButton" id=@friendButtonId />
+                        </div>
+                    }
+                    else
+                    {
+                        <input type="button" onclick="toggleFriend(friendId = @Model.User.UserId)" value="@Model.FriendButtonText" class=@Model.FriendButtonClass id=@friendButtonId />
+                    }
+
+                </div>
+
+                <div class="row">
+                    @Html.ActionLink("Chat", "Index", "Chat", new { friendId = Model.User.UserId }, new { @class = "UserButton" })
+                </div>
+            }
+        </div>
+    </div>
+</div>

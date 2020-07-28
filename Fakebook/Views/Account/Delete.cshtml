@@ -1,0 +1,25 @@
+﻿@model Entities.User
+
+@{
+    ViewBag.Title = "Delete Account";
+
+    string amountOfDays = (((TimeSpan)(DateTime.Now - Model.DateJoined)).Days).ToString();
+}
+
+<h2>Delete Account</h2>
+
+<h3>@Model.FirstName, are you sure you want to delete your account?</h3>
+
+<h3>We have been together for @amountOfDays days...</h3>
+
+<div>
+    <hr />
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="DELETE NOW" class="DeleteButton" />
+        </div>
+    }
+</div>

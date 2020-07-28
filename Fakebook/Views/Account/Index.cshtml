@@ -1,0 +1,100 @@
+﻿@model Fakebook.Models.UserPageModel
+
+@{
+    ViewBag.Title = Model.User.FirstName;
+
+    int numberOfFriends = 0;
+
+    if (Model.Friends != null)
+    {
+        numberOfFriends = Model.Friends.Count();
+    }
+
+    string friendButtonId = "friendButton" + Model.User.UserId;
+    string rejectButtonId = "rejectButton" + Model.User.UserId;
+    string friendActionId = "friendAction" + Model.User.UserId;
+}
+
+<div class="container centerOnMobile" style="width:90vw; padding:0">
+
+    <div class="AccountOptions">
+        @if (Model.User.UserId == Model.CurrentUserId)
+        {
+            <p>
+                @Html.ActionLink("Edit Account", "Edit") |
+                @Html.ActionLink("Change Password", "UpdatePassword") |
+                @Html.ActionLink("Sign Out", "Logout", "Security")
+            </p>
+        }
+        else
+        {
+
+            if (Model.Requested)
+            {
+                <div style="padding: 0; display:inline;" >
+                    @Html.ActionLink("Reject", "ToggleFriendFromProfile", "Friend", new { friendId = Model.User.UserId }, new { @class = "RejectButtonProfile" })
+                </div>
+                <div style="padding: 0; display:inline" id="@friendActionId">
+                    @Html.ActionLink("Accept", "ToggleFriendFromProfile", "Friend", new { friendId = Model.User.UserId }, new { @class = "AcceptButtonProfile" })
+                </div>
+            }
+            else
+            {
+                @Html.ActionLink(Model.FriendButtonText, "ToggleFriendFromProfile", "Friend", new { friendId = Model.User.UserId }, new { @class = @Model.FriendButtonClass })
+        }
+
+        @Html.ActionLink("Chat", "Index", "Chat", new { friendId = Model.User.UserId }, new { @class = "SecondaryButton" })
+    }
+    </div>
+
+
+    <div class="Profile" >
+        @if (Model.User.UserId == Model.CurrentUserId)
+        {<a href="@Url.Action("Edit", "Account")" >
+                <img alt="Profile Picture For @Model.User.FirstName @Model.User.LastName" src="~/Images/@Model.User.ImageUrl" class="AccountImage"/>
+            </a>
+        }
+        else
+        {
+            <img alt="Profile Picture For @Model.User.FirstName @Model.User.LastName" src="~/Images/@Model.User.ImageUrl" class="AccountImage"/>
+        }
+
+    <div>
+        <h2>@Model.User.FirstName @Model.User.LastName</h2>
+        <h3>Email: @Model.User.EmailAddress</h3>
+        <h3>Member Since: @Model.User.DateJoined.ToShortDateString()</h3>
+        <h3>@Html.ActionLink("Friends:", "AllFriends", "Friend", new { id = Model.User.UserId }, null) @numberOfFriends</h3>
+
+        <div style="margin-top: 50px;">
+            @if (Model.User.UserId == Model.CurrentUserId)
+            {
+                @Html.ActionLink("DELETE ACCOUNT", "Delete", null, new { @class = "DeleteButton" })
+            }
+        </div>
+        </div>
+    </div>
+
+    <div class="ProfileStatusHolder">
+        @if (Model.Statuses == null || Model.Statuses.Count == 0)
+        {
+            if (Model.CurrentUserId == Model.User.UserId)
+            {
+
+                <h2>You haven't posted a status yet</h2>
+            }
+            else
+            {
+
+                <h2>@Model.User.FirstName hasn't posted a status yet</h2>
+            }
+        }
+        else
+        {
+                    foreach (var status in Model.Statuses)
+                    {
+                        @Html.Partial("_StatusList", status)
+                    }
+        }
+    </div>
+
+</div>

@@ -1,0 +1,35 @@
+﻿@model Fakebook.Models.StatusModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { style = "padding-top:20px" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div style="text-align:center">
+        <a href="@Url.Action("Index", "Account", new { id = Model.User.UserId })" style="display:inline-block">
+            <img alt="Avatar for @Model.User.FirstName @Model.User.LastName" src="~/Images/@Model.User.ImageUrl" class="Avatar" />
+        </a>
+        @Html.EditorFor(model => model.NewStatus.Text, new { htmlAttributes = new { @class = "form-control", id = "writeStatus", placeholder = "What's on your mind?", autocomplete = "off" } })
+    </div>
+    @Html.ValidationMessageFor(model => model.NewStatus.Text, "", new { @class = "text-danger" })
+}
+
+@if (Model.AllStatuses == null || Model.AllStatuses.Count == 0)
+{
+    <h2>Add friends to see statuses!</h2>
+}
+else
+{
+    foreach (var status in Model.AllStatuses)
+    {
+        @Html.Partial("_StatusList", status)
+    }
+}
+
+@Scripts.Render("~/scripts/StatusChecker.js")

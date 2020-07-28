@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakebook - @ViewBag.Title</title>
+    <link id="favicon" href="~/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    <a href="@Url.Action("Index", "Home")">
+                        <img src="~/Images/FacebookLogo.jpg">
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("News Feed", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Friends", "AllFriends", "Friend", new { id = 0 }, new { id = "friendNavButton" })</li>
+                    <li>@Html.ActionLink("Messages", "Messages", "Chat", null, new { id = "messageNavButton" })</li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>@Html.ActionLink("People", "AllUsers", "Social")</li>
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            @Html.ActionLink(@HttpContext.Current.User.Identity.Name, "Index", "Account", new { id = 0}, null)
+                        </li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Register", "Register", "Security")</li>
+                        <li>@Html.ActionLink("Log In", "Login", "Security")</li>
+                    }
+                </ul>
+</div>
+        </div>
+    </div>
+    <div class="container body-content Layout">
+        @RenderBody()
+        <footer>
+            <hr />
+            <p>&copy; @DateTime.Now.Year - Fakebook</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+    @Scripts.Render("~/scripts/site.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,438 @@
+﻿@charset "UTF-8";
+
+* {
+    font-family: 'Arial Narrow Bold','Franklin Gothic Medium', 'Century Gothic', sans-serif;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+a {
+    color: #3b5997;
+}
+
+    a:hover {
+        color: #0a1b3d;
+        text-decoration-line: none;
+    }
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.logo{
+    margin-right: 30px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+.navbar {
+   background-color: #3b5997;
+   color: white;
+}
+
+.nav{
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+    .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+        color: lightgrey;
+    }
+
+.AccountImage {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.AccountOptions {
+    font-size: 1.2em;
+    margin: 30px 0 60px 0;
+    text-align: center;
+    color: gray;
+}
+
+    .AccountOptions a {
+        margin: 0 20px;
+    }
+
+/*footer {
+    position: absolute;
+    bottom: 0px;
+    height: 3px;
+    width: 70%;
+}*/
+
+.Avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ChatAvatar {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: inline;
+}
+
+.UserListName{
+    font-size: 3em;
+    font: bold;
+    color:white;
+    display: inline-block;
+
+}
+
+.UserListName a{
+    color: white;
+}
+
+.jumbotron {
+    padding: 25px 0;
+}
+
+.time-left{
+    font-size: 0.75em;
+    float: left;
+}
+
+.time-right {
+    font-size: 0.75em;
+    float: right;
+}
+
+
+#discussion {
+    max-height: 70vh;
+    min-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+}
+
+
+
+#writeStatus {
+    max-width: 40vw;
+    width: 40vw;
+    height: 12vh;
+    border-radius: 50px;
+    font-size: 1.3em;
+    margin: auto;
+    display: inline-block;
+}
+
+.DefaultButton, .UserButton, .RejectButton, .AcceptButton, .RemoveButton, .LikedButton, .AcceptButtonProfile, .RejectButtonProfile, .RemoveButtonProfile, .UserButtonProfile {
+    background-color: white;
+    text-align: center;
+    color: #3b5997;
+    border: 0px solid #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    padding: 10px 30px;
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    outline: 0;
+    font-size: 1.2em;
+    line-height: 20px;
+    margin: 10px 0;
+    white-space: nowrap;
+}
+
+    .DefaultButton:hover, .UserButton:hover {
+        color: #3b5997;
+        padding: 10px 0;
+        font-size: 1.7em;
+    }
+
+    .RejectButton:hover, .AcceptButton:hover, .RemoveButton:hover, .LikedButton:hover {
+        color: white;
+        padding: 10px 0;
+        font-size: 1.7em;
+    }
+
+.UserButton, .RejectButton, .AcceptButton, .RemoveButton, .AcceptButtonProfile, .RejectButtonProfile, .RemoveButtonProfile, .UserButtonProfile {
+    padding: 10px 0px;
+    width: 80%;
+    margin: 5px auto;
+}
+
+.required::after {
+        content: "*";
+        font-weight: bold;
+        color: red;
+    }
+
+.partialContainer {
+    color: white;
+    margin: 20px auto;
+    border-radius: 40px;
+}
+
+.sentAt {
+    font-size: 0.85em;
+    display: block;
+    margin-left: 20px;
+    display: inline-block;
+}
+.partialText {
+    word-wrap: break-word;
+    font-size: 1.4em;
+}
+
+
+.messageText {
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.messageInput {
+    float: right;
+}
+
+#sendmessage {
+    width: 5vw;
+    padding: 0;
+}
+
+#message, #sendmessage, #search {
+    height: 5vh;
+    font-size: 1.5em;
+    margin: auto;
+    border-radius: 30px;
+}
+
+#message, #sendmessage {
+    float: right;
+}
+
+#search {
+    margin: 0 0 20px auto;
+}
+
+#message, #search {
+    max-width: 30vw;
+    width: 30vw;
+}
+
+.yourMessage {
+    background-color: #2284ff;
+}
+
+.otherMessage {
+    background-color: #f1f0f0;
+}
+
+.messageHolder {
+    margin: 5px 50px;
+    max-width: 40%;
+    min-width: 10%;
+    width: auto;
+    padding: 5px 20px 10px 20px;
+    border-radius: 40px;
+}
+
+.SecondaryButton, .DeleteButton {
+    background-color: #1c366e;
+    text-align: center;
+    color: white;
+    border: 0px solid #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    padding: 15px;
+    border-radius: 10px;
+    outline: 0;
+    font-size: 1.2em;
+    line-height: 20px;
+    display: inline;
+}
+
+    .SecondaryButton:hover, .UserButtonProfile:hover, .AcceptButtonProfile:hover, .RejectButtonProfile:hover, .RemoveButtonProfile:hover {
+        color: grey;
+    }
+
+.DeleteButton, .RejectButton, .RemoveButton, #DeleteStatus, .RejectButtonProfile, .RemoveButtonProfile {
+    background-color: #ED553B;
+    color: white;
+}
+
+.AcceptButton, .LikedButton, .AcceptButtonProfile {
+    background-color: #43C59E;
+    color: white;
+}
+
+.UserButtonProfile {
+    background-color: #1c366e;
+    color: white;
+}
+
+.AcceptButtonProfile, .RejectButtonProfile {
+    width: 150px;
+    display: inline;
+    line-height: 30px;
+    padding: 15px;
+}
+
+.RemoveButtonProfile, .UserButtonProfile {
+    width: 200px;
+    display: inline;
+    line-height: 30px;
+    padding: 15px;
+}
+
+.TopButton {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.DisplayBlockOnMobile{
+    display:inline;
+}
+
+.Profile{
+    float:left;
+    text-align:center;
+}
+
+.Layout {
+    width: 90vw;
+    padding: 0;
+}
+
+.ProfileStatusHolder{
+    float:right;
+}
+
+.ProfileStatus{
+    width:50vw;
+}
+
+.HomeStatus{
+    width: 70vw;
+}
+
+.SentByThem{
+    text-align:left;
+}
+
+.SentByMe {
+    text-align: right;
+    padding-right: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    #writeStatus, #search, #message {
+        max-width: 80vw;
+        width: 80vw;
+    }
+
+    #search, #message {
+        height: 10vh;
+    }
+
+    .UserListName {
+        font-size: 2em;
+    }
+
+    .centerOnMobile {
+        text-align: center;
+    }
+
+    .DefaultButton, .UserButton, .RejectButton, .AcceptButton, .RemoveButton, .LikedButton, .SecondaryButton {
+        max-width: 80%;
+        width: 80%;
+        font-size: 1.2em;
+        line-height: 20px;
+        margin: 10px auto;
+    }
+
+    .TopButton {
+        display: inline-block;
+        margin: 10px 0;
+    }
+
+    .DisplayBlockOnMobile {
+        display: block;
+    }
+
+    .messageHolder {
+        margin: 5px 5px;
+        max-width: 70vw;
+        min-width: 15vw;
+    }
+
+    #discussion {
+        max-height: 65vh;
+        min-height: 65vh;
+    }
+
+    #sendmessage {
+        display: none;
+    }
+
+    .Profile {
+        float: none;
+        width:90vw;
+    }
+
+    .AccountOptions {
+        margin: 20px auto 30px auto;
+    }
+
+        .AccountOptions a {
+            margin: 0 10px;
+        }
+
+    .AccountImage {
+        margin:0;
+    }
+
+    .ProfileStatusHolder {
+        float: none;
+    }
+
+    .ProfileStatus {
+        width: 80vw;
+    }
+
+    .HomeStatus {
+        width: 80vw;
+    }
+
+    .SentByThem {
+        padding-left: 30px;
+    }
+}
